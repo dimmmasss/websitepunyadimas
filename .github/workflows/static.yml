@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up Image and Message</title>
+    <style>
+        .popup {
+            text-align: center;
+        }
+      
+        .popup img {
+            cursor: pointer;
+        }
+      
+        .message {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .popup-image {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup">
+        <img src="https://drive.google.com/uc?id=1-zaxye7wYdJxkaBLZGo1Q4yyaIMIRO_a" onclick="showMessage()" alt="Tap Here">
+        <div class="message" id="message">
+            <h2><3</h2>
+            <p>sakha megan aslii gua seneng bgt main sama kalian walaupun sebentar doang, semoga besok kita bisa main main lagi yaa!!btw ini gua bikin ginian 2 jam asu shibal alias susah bgt bajingan.yaudah ya segini aja gua bukan anak sisfor, ini gara gara gua baru belajar aja makanya gua tesnya ke kalian. btw itu foto kita di sate jadi kaya gitu asu gara gara filter tiktok coba pencet dah itu, makasih ya udh mau buka ini love you.</p>
+            <button onclick="showPopupImage()">nih fotonya</button>
+        </div>
+    </div>
+
+    <div class="popup-image" id="popupImage">
+        <img src="https://drive.google.com/uc?id=1J_tUI1HMR908LAn3myhOJuD_AJkzvy7v" alt="Pop-up Image">
+        <button onclick="hidePopupImage()">Close</button>
+    </div>
+
+    <script>
+        function showMessage() {
+            var message = document.getElementById('message');
+            message.style.display = 'block';
+        }
+
+        function showPopupImage() {
+            var popupImage = document.getElementById('popupImage');
+            popupImage.style.display = 'block';
+        }
+
+        function hidePopupImage() {
+            var popupImage = document.getElementById('popupImage');
+            popupImage.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
